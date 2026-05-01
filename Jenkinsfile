@@ -22,8 +22,8 @@ pipeline {
         stage("Test") { 
 
             steps {
-                echo "Unit tests"
-                echo "Integration tests"
+                echo "Unit tests."
+                echo "Integration tests."
             }
 
         }
@@ -31,7 +31,7 @@ pipeline {
         stage("Code Quality Check") { 
 
             steps {
-                echo "Check the quality of the code"
+                echo "Check the quality of the code."
             }
 
         }
@@ -39,7 +39,7 @@ pipeline {
         stage("Deploy") { 
 
             steps {
-                echo "Deploy the application to testing environment: ${TESTING_ENVIRONMENT}"
+                echo "Deploy the application to testing environment: ${TESTING_ENVIRONMENT}."
             }
 
         }
@@ -48,6 +48,14 @@ pipeline {
 
             steps {
                 sleep time: 10, unit: 'SECONDS'
+            }
+
+        }
+
+        stage("Deploy to Production") { 
+
+            steps {
+                echo "Deploy the code to the production environment, ${PRODUCTION_ENVIRONMENT}, using testing environment: ${TESTING_ENVIRONMENT}."
             }
 
         }
