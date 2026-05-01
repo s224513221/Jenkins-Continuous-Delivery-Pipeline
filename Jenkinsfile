@@ -36,6 +36,14 @@ pipeline {
 
         }
 
+        stage("Deploy") { 
+
+            steps {
+                echo "Deploy the application to testing environment: ${TESTING_ENVIRONMENT}"
+            }
+
+        }
+
     }
 
 }
