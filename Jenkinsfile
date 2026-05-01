@@ -10,10 +10,11 @@ pipeline {
 
     stages {
 
-        stage("Template") {
+        stage("Build") {
 
             steps {
-                echo "Template"
+                echo "Fetch the source code from the directory path: ${DIRECTORY_PATH}."
+                echo "Compile the code and generate any necessary artefacts."
             }
 
         }
