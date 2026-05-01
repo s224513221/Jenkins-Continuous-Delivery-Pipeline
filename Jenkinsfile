@@ -62,5 +62,21 @@ pipeline {
     
     }
 
+    post {
+
+        always {
+            echo "====== Jenkins Pipeline Executes Regardless ======"
+        }
+
+        success {
+            echo "====== Jenkins Pipeline Executed Successfully ======"
+        }
+
+        failure {
+            echo "====== Jenkins Pipeline Execution Failed ======"
+        }
+        
+    }
+
 }
 
