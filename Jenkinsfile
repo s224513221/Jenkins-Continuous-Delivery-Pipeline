@@ -44,6 +44,14 @@ pipeline {
 
         }
 
+        stage("Approval") { 
+
+            steps {
+                sleep time: 10, unit: 'SECONDS'
+            }
+
+        }
+    
     }
 
 }
