@@ -28,6 +28,14 @@ pipeline {
 
         }
 
+        stage("Code Quality Check") { 
+
+            steps {
+                echo "Check the quality of the code"
+            }
+
+        }
+
     }
 
 }
