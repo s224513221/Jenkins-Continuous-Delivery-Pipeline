@@ -19,6 +19,15 @@ pipeline {
 
         }
 
+        stage("Test") { 
+
+            steps {
+                echo "Unit tests"
+                echo "Integration tests"
+            }
+
+        }
+
     }
 
 }
